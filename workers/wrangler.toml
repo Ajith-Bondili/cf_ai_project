@@ -1,0 +1,19 @@
+name = "cf-ai-codementor"
+main = "src/index.ts"
+compatibility_date = "2024-11-18"
+compatibility_flags = ["nodejs_compat"]
+
+# Workers AI binding
+[ai]
+binding = "AI"
+
+# Durable Objects
+[[durable_objects.bindings]]
+name = "LEARNING_STATE"
+class_name = "LearningState"
+script_name = "cf-ai-codementor"
+
+# Migrations for Durable Objects
+[[migrations]]
+tag = "v1"
+new_classes = ["LearningState"]
