@@ -24,7 +24,7 @@ Struggling with: ${state.struggleAreas.join(', ')}.
     console.log('Sending to AI:', JSON.stringify(messages, null, 2));
 
     try {
-        const response = await ai.run('@cf/meta/llama-3-8b-instruct', {
+        const response = await ai.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", {
             messages,
         });
         return response.response;
