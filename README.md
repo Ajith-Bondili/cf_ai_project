@@ -1,18 +1,22 @@
 # CF_AI_CodeMentor
 
-A personalized coding tutor for exam prep, powered by Cloudflare Workers AI, Durable Objects, and Pages.
+![CF_AI_CodeMentor Screenshot](./v1.png)
+
+**A personalized coding tutor for exam prep, powered by Cloudflare Workers AI, Durable Objects, and Pages.**
 
 ## Overview
 CF_AI_CodeMentor is an AI-powered application designed to help students prepare for coding exams. It adapts to the user's skill level, tracks learning progress, and generates personalized practice problems.
 
+The frontend features a unique **Neobrutalist "Dorksense" design**, making the learning experience vibrant, tactile, and engaging.
+
 ### Key Components
--   **AI**: Uses Llama 3.3 (via Workers AI) to provide intelligent tutoring.
--   **State**: Uses Durable Objects to maintain persistent user learning state (topics, mastery, history).
--   **Frontend**: A React-based chat interface deployed on Cloudflare Pages.
+-   **AI**: Uses **Llama 3.3** (`@cf/meta/llama-3.3-70b-instruct-fp8-fast`) via Workers AI for intelligent tutoring.
+-   **State**: Uses **Durable Objects** to maintain persistent user learning state (topics, mastery, history).
+-   **Frontend**: A React-based chat interface with a custom Neobrutalist design system, deployed on Cloudflare Pages.
 
 ## Project Structure
 -   `workers/`: Cloudflare Workers backend (API, AI logic, Durable Objects).
--   `frontend/`: React frontend application.
+-   `frontend/`: React frontend application (Vite + Tailwind CSS).
 
 ## Setup & Running
 
@@ -37,7 +41,7 @@ CF_AI_CodeMentor is an AI-powered application designed to help students prepare 
     npm install
     npm run dev
     ```
-    The frontend will run on `http://localhost:5173` (usually).
+    The frontend will run on `http://localhost:5173`.
 
 ## Architecture
 -   **User** interacts with the **React Frontend**.
@@ -45,3 +49,12 @@ CF_AI_CodeMentor is an AI-powered application designed to help students prepare 
 -   **Worker** routes requests:
     -   Interacts with **Durable Object** to retrieve/update User State.
     -   Calls **Workers AI** (Llama 3.3) with context from the Durable Object to generate responses.
+
+## Assignment Compliance
+This project fulfills the Cloudflare AI App assignment requirements:
+-   **LLM**: Llama 3.3 on Workers AI.
+-   **Workflow/Coordination**: Durable Objects for state management.
+-   **User Input**: React Chat Interface.
+-   **Memory**: Durable Object storage.
+-   **Original Work**: Custom implementation and design.
+

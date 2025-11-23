@@ -24,7 +24,7 @@ function App() {
                             textShadow: '6px 6px 0px #000',
                             WebkitTextStroke: '2px black'
                         }}>
-                        dorksense
+                        CodeMentor
                     </h1>
                     <div className="absolute -top-2 -right-6 rotate-12 bg-neo-accent border-4 border-black px-3 py-0.5 font-black shadow-neo transform group-hover:rotate-6 transition-all">
                         BETA
