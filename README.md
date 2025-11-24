@@ -18,6 +18,10 @@ The frontend features a unique **Neobrutalist "Dorksense" design**, making the l
 -   `workers/`: Cloudflare Workers backend (API, AI logic, Durable Objects).
 -   `frontend/`: React frontend application (Vite + Tailwind CSS).
 
+## Deployment
+- **Frontend (Live)**: [https://cf-ai-codementor.pages.dev](https://cf-ai-codementor.pages.dev)
+- **Backend API**: `https://cf_ai_codementor.ajithbon05.workers.dev`
+
 ## Setup & Running
 
 ### Prerequisites
